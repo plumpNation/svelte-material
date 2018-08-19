@@ -1,13 +1,34 @@
-<ul class="mdc-list" aria-orientation="vertical">
+<ul ref:root class="mdc-list" aria-orientation={orientation}>
   <slot />
 </ul>
 
 <script>
+import { MDCList } from '@material/list'
+
 export default {
   data () {
     return {
+      orientation: 'vertical',
+      selection: 'single', // single
+    };
+  },
 
+  oncreate() {
+    this.mdcList = new MDCList(this.refs.root);
+
+    this.updateList(this.get());
+  },
+
+  methods: {
+    updateList({ selection }) {
+      if (selection === 'single') {
+        this.mdcList.singleSelection = true;
+      }
     }
+  },
+
+  ondestroy() {
+    this.mdcList.destroy();
   }
 }
 </script>

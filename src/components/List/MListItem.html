@@ -1,3 +1,13 @@
-<li class="mdc-list-item">
+<li class="mdc-list-item" aria-selected={selected}>
   <slot />
 </li>
+
+<script>
+  export default {
+    data() {
+      return {
+        selected: false,
+      }
+    }
+  }
+</script>

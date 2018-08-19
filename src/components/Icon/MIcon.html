@@ -1,4 +1,4 @@
-<i class="material-icons" on:click="clicked()">
+<i class="material-icons {classes}" on:click="clicked()" aria-hidden="true">
   {icon}
 </i>
 
@@ -6,7 +6,17 @@
 export default {
   data () {
     return {
-      icon: ''
+      icon: '',
+      inDrawer: false
+    }
+  },
+  computed: {
+    classes({inDrawer}) {
+      const classes = [];
+
+      if (inDrawer) classes.push('mdc-list-item__graphic');
+
+      return classes;
     }
   },
   methods: {
