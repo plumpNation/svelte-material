@@ -6,9 +6,9 @@
 <MCard>
     <MCardMediaItem slot="media" height="1" src="..." />
     <MTitle slot="title">Title</MTitle>
-    <MSubheading level="1" slot="subtitle">
+    <MSubtitle level="1" slot="subtitle">
         Subtitle
-    </MSubheading>
+    </MSubtitle>
     <MBody level="1" slot="supportingText">
         Text
     </MBody>
@@ -21,7 +21,7 @@
 | Prop | Type | Default | Required | Description |
 |------|------|---------|----------|-------------|
 | verticalActions | Boolean | - | false | renders actions vertical |
-| largeTitle | Boolean | - | false | larger title (without typography component)| 
+| largeTitle | Boolean | - | false | larger title (without typography component)|
 | horizontal | Boolean | -| false | renders media, title & subtitle horizontal
 
 ### Slots

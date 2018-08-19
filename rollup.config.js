@@ -16,9 +16,9 @@ export default {
   output: {
     sourcemap: true,
     format: 'iife',
-    file: 'public/bundle.js'
+    file: 'public/bundle.js',
+    name: 'app'
   },
-  name: 'app',
   plugins: [
     production || livereload(),
 

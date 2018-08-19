@@ -1,18 +1,15 @@
-{#if href}
-  <a role="button" ref:self {href} {name} {disabled} class="mdc-button {classes}">
-    {#if icon}
-    <i class="material-icons mdc-button__icon">{icon}</i>
-    {/if}
-    <slot />
+<nav id="icon-tab-bar" class="mdc-tab-bar mdc-tab-bar--icon-tabs">
+  <a class="mdc-tab mdc-tab--active" href="#recents">
+    <i class="material-icons mdc-tab__icon" aria-label="Recents">phone</i>
   </a>
-{:else}
-  <button ref:self {type} {name} {disabled} class="mdc-button {classes}">
-    {#if icon}
-    <i class="material-icons mdc-button__icon">{icon}</i>
-    {/if}
-    <slot />
-  </button>
-{/if}
+  <a class="mdc-tab" href="#favorites">
+    <i class="material-icons mdc-tab__icon" aria-label="Favorites">favorite</i>
+  </a>
+  <a class="mdc-tab" href="#nearby">
+    <i class="material-icons mdc-tab__icon" aria-label="nearby">person_pin</i>
+  </a>
+  <span class="mdc-tab-bar__indicator"></span>
+</nav>
 
 <script>
 import { MDCRipple } from '@material/ripple'
@@ -36,7 +33,7 @@ export default {
     }
   },
   computed: {
-    classes: ({raised, unelevated, stroked, dense, compact, background, color}) => {
+    classes: ({ raised, unelevated, stroked, dense, compact, background, color }) => {
       const classList = []
 
       raised && classList.push('mdc-button--raised')
@@ -60,5 +57,7 @@ export default {
 </script>
 
 <style type='scss'>
-@import "@material/button/mdc-button";
+  @import "@material/tab-scroller/mdc-tab-scroller";
+  @import "@material/tab-indicator/mdc-tab-indicator";
+  @import "@material/tab/mdc-tab";
 </style>

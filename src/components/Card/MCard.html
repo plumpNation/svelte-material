@@ -1,35 +1,35 @@
 <div class="mdc-card">
-  <div class="&#123;isHorizontal}">
+  <div class="{isHorizontal}">
     <section class="mdc-card__primary">
-      &#123;#if slots['media']}
+      {#if slots['media']}
       <section class="mdc-card__media">
         <slot name="media" />
       </section>
-      &#123;/if}
-      &#123;#if slots['title']}
-      <div class="mdc-card__title&#123;classesTitle}">
+      {/if}
+      {#if slots['title']}
+      <div class="mdc-card__title{classesTitle}">
         <slot name="title" />
       </div>
-      &#123;/if}
-      &#123;#if slots['subtitle']}
+      {/if}
+      {#if slots['subtitle']}
       <div class="mdc-card__subtitle">
         <slot name="subtitle" />
       </div>
-      &#123;/if}
+      {/if}
     </section>
   </div>
 
-  &#123;#if slots['supportingText']}
+  {#if slots['supportingText']}
   <section class="mdc-card__supporting-text">
     <slot name="supportingText" />
   </section>
-  &#123;/if}
+  {/if}
 
-  &#123;#if slots['actions']}
-  <section class="mdc-card__actions&#123;classesActions}">
+  {#if slots['actions']}
+  <section class="mdc-card__actions{classesActions}">
     <slot name="actions" />
   </section>
-  &#123;/if}
+  {/if}
 
 </div>
 

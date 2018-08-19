@@ -10,7 +10,7 @@ import MCaption from './Typography/MCaption.html'
 import MDisplay from './Typography/MDisplay.html'
 import MHeadline from './Typography/MHeadline.html'
 import MTitle from './Typography/MTitle.html'
-import MSubheading from './Typography/MSubheading.html'
+import MSubtitle from './Typography/MSubtitle.html'
 import MTypography from './Typography/MTypography.html'
 
 export {

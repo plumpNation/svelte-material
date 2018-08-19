@@ -35,22 +35,52 @@ export default {
   },
 
   ondestroy () {
-    this.mdcLinearProgress.destroy();
+    const { mdcLinearProgress } = this.get();
+
+    mdcLinearProgress.destroy();
   },
 
   methods: {
     show () {
-      this.mdcLinearProgress.open()
+      const { mdcLinearProgress } = this.get();
+
+      mdcLinearProgress.open()
     },
     hide () {
-      this.mdcLinearProgress.close()
+      const { mdcLinearProgress } = this.get();
+
+      mdcLinearProgress.close()
     },
-    updateMDCLinearProgress() {
-      this.mdcLinearProgress.progress(this.progress)
-      this.mdcLinearProgress.buffer(this.buffer)
-      this.mdcLinearProgress.determinate = !this.indeterminate
-      this.mdcLinearProgress.reverse = this.reversed
-      this.open ? this.mdcLinearProgress.open() : this.mdcLinearProgress.close()
+
+    /**
+     * Called by oncreate and onstate, so must support properties not existing.
+     */
+    updateMDCLinearProgress({
+      progress,
+      buffer,
+      indeterminate,
+      reversed,
+      open
+    }) {
+      const { mdcLinearProgress } = this.get();
+
+      if (progress) {
+        mdcLinearProgress.progress(progress)
+      }
+
+      if (buffer) {
+        mdcLinearProgress.buffer(buffer)
+      }
+
+      if (determinate) {
+        mdcLinearProgress.determinate = !indeterminate
+      }
+
+      if (reversed) {
+        mdcLinearProgress.reverse = reversed
+      }
+
+      open ? mdcLinearProgress.open() : mdcLinearProgress.close()
     }
   }
 }

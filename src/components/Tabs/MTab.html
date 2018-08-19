@@ -1,0 +1,30 @@
+<a class="mdc-tab {classes}">
+  <slot name="icon"/>
+
+  {#if hasIcon && label}
+  <span class="mdc-tab__icon-text">
+    <slot/>
+  </span>
+  {:elseif label}
+  <span>
+    <slot />
+  </span>
+  {#if}
+</a>
+
+<script>
+  import { MDCTab } from '@material/tabs'
+
+  import MIcon from '../Icon/MIcon.html';
+
+  export default {
+    components: {
+      MIcon
+    },
+    classes: ({active, hasIcon, label}) => ({
+      'mdc-tab--active': active,
+      'mdc-tab--with-icon-and-text': hasIcon && label
+    }),
+    hasIcon: ({slots}) => !!slots.icon
+  }
+</script>

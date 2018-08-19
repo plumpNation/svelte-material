@@ -24,7 +24,7 @@
       </MLayoutGridCell>
     </MLayoutGridInner>
 
-    <MSubheading level="2">Subheading level 2</MSubheading>
+    <MSubtitle level="2">Subheading level 2</MSubtitle>
 
     <MBody>
       Material Components for the web (MDC-Web) helps developers execute Material Design. Developed by a core team of engineers and UX designers at Google, these components enable a reliable development workflow to build beautiful and functional web projects.
@@ -35,7 +35,7 @@
         <MTitle>Cards</MTitle>
         <MCard>
           <span slot="title"><MTitle>Title</MTitle></span>
-          <span slot="subtitle"><MSubheading level="1">Subtitle</MSubheading></span>
+          <span slot="subtitle"><MSubtitle level="1">Subtitle</MSubtitle></span>
           <span slot="supportingText">
             <MBody level="1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -142,11 +142,11 @@
 
     <MLayoutGridInner>
       <MLayoutGridCell span="2">
-        <MSubheading level="1">Icon</MSubheading>
+        <MSubtitle level="1">Icon</MSubtitle>
         <MIcon icon="cloud" />
       </MLayoutGridCell>
       <MLayoutGridCell span="2">
-        <MSubheading level="1">IconToggle</MSubheading>
+        <MSubtitle level="1">IconToggle</MSubtitle>
         <MIconToggle value="{iconToggle}" iconOn="favorite" iconOff="favorite_border" on:input="iconEvent(event.value)" accent />
       </MLayoutGridCell>
     </MLayoutGridInner>
@@ -155,7 +155,7 @@
 
     <MLayoutGridInner>
       <MLayoutGridCell>
-        <MLinearProgress ref="progress" open progress="0.5" buffer="0.5" indeterminate />
+        <!-- <MLinearProgress ref="progress" open progress="0.5" buffer="0.5" indeterminate /> -->
       </MLayoutGridCell>
     </MLayoutGridInner>
 
@@ -181,7 +181,7 @@ import {
   MDisplay,
   MHeadline,
   MTitle,
-  MSubheading,
+  MSubtitle,
   MTypography
 } from './components/Typography'
 import {
@@ -209,7 +209,7 @@ export default {
       MFab,
       MHeadline,
       MTitle,
-      MSubheading,
+      MSubtitle,
       MBody,
       MDisplay,
       MCard,

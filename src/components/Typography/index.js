@@ -4,7 +4,7 @@ import MCaption from './MCaption.html'
 import MDisplay from './MDisplay.html'
 import MHeadline from './MHeadline.html'
 import MTitle from './MTitle.html'
-import MSubheading from './MSubheading.html'
+import MSubtitle from './MSubtitle.html'
 import MTypography from './MTypography.html'
 
 export {
@@ -14,6 +14,6 @@ export {
   MDisplay,
   MHeadline,
   MTitle,
-  MSubheading,
+  MSubtitle,
   MTypography
 }

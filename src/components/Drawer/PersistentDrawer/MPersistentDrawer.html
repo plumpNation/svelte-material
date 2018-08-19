@@ -1,23 +1,25 @@
-<aside ref:self class="mdc-persistent-drawer" v-on="$listeners">
-    <nav class="mdc-persistent-drawer__drawer">
-      {#if slots['toolbarSpacer']}
-        <div class="mdc-temporary-drawer__toolbar-spacer {spacerClasses}">
-            <slot name="toolbarSpacer" />
-        </div>
-      {/if}
-      {#if slots['header']}
-        <header class="mdc-persistent-drawer__header {headerClasses}">
-            <div class="mdc-persistent-drawer__header-content">
-                <slot name="header" />
-            </div>
-        </header>
-      {/if}
-      {#if slots['default']}
-        <nav class="mdc-persistent-drawer__content {contentClasses}">
-            <slot />
-        </nav>
-      {/if}
+<aside ref:self class="mdc-drawer mdc-drawer--persistent mdc-typography">
+  <nav class="mdc-drawer__drawer">
+    {#if slots['toolbarSpacer']}
+    <div class="mdc-temporary-drawer__toolbar-spacer {spacerClasses}">
+      <slot name="toolbarSpacer" />
+    </div>
+    {/if}
+
+    {#if slots['header']}
+    <header class="mdc-drawer__header {headerClasses}">
+      <div class="mdc-drawer__header-content">
+        <slot name="header" />
+      </div>
+    </header>
+    {/if}
+
+    {#if slots['default']}
+    <nav class="mdc-drawer__content mdc-list {contentClasses}">
+      <slot />
     </nav>
+    {/if}
+  </nav>
 </aside>
 
 <script>

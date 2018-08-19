@@ -15,11 +15,9 @@
     "start": "serve public",
     "release": "standard-version"
   },
-  "dependencies": {
-    "@material/tab-bar": "^0.38.1",
-    "material-components-web": "^0.38.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "material-components-web": "^0.38.2",
     "node-sass": "^4.7.2",
     "rollup": "^0.64.1",
     "rollup-plugin-buble": "^0.19.2",

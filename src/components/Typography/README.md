@@ -7,7 +7,7 @@
     <MDisplay level="4">Display 4</MDisplay>
     <MHeadline>Headline</MHeadline>
     <MTitle>Title</MTitle>
-    <MSubheading level="1">Subheading 1</MSubheading>
+    <MSubtitle level="1">Subheading 1</MSubtitle>
     <MBody level="2">Body 2</MBody>
     <MCaption>Caption</MCaption>
     <MButtonLabel>Button</MButtonLabel>
@@ -92,7 +92,7 @@
 |------|-------------------|-------------|
 | default | - | content |
 
-## MSubheading
+## MSubtitle
 
 ### Props
 
