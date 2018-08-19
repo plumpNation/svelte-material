@@ -159,6 +159,16 @@
       </MLayoutGridCell>
     </MLayoutGridInner>
 
+    <MLayoutGridInner>
+      <MLayoutGridCell>
+        <MList>
+          <MListItem>
+            <MIcon icon="edit"></MIcon>
+            I am just a boy
+          </MListItem>
+        </MList>
+      </MLayoutGridCell>
+    </MLayoutGridInner>
 
   </MLayoutGrid>
 </MTheme>
@@ -198,6 +208,10 @@ import {
 import { MElevation } from './components/Elevation'
 import { MIcon } from './components/Icon'
 import { MIconToggle } from './components/IconToggle'
+import {
+  MList,
+  MListItem
+} from './components/List'
 
 export default {
     components: {
@@ -222,7 +236,9 @@ export default {
       MElevation,
       MIcon,
       MIconToggle,
-      MLinearProgress
+      MLinearProgress,
+      MList,
+      MListItem
     },
     data () {
       return {

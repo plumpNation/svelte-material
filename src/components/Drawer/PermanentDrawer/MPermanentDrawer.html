@@ -1,9 +1,11 @@
-<nav class="mdc-drawer mdc-drawer--permanent mdc-typography">
-  {#if slots['toolbarSpacer']}
-  <slot name="toolbarSpacer" />
-  {/if}
-  <slot />
-</nav>
+<aside class="mdc-drawer mdc-drawer--permanent">
+  <nav class="mdc-drawer__drawer">
+    {#if slots['toolbarSpacer']}
+    <slot name="toolbarSpacer" />
+    {/if}
+    <slot />
+  </nav>
+</aside>
 
 <script>
 export default {
