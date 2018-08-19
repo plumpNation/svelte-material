@@ -1,20 +1,20 @@
-import svelte from 'rollup-plugin-svelte';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import buble from 'rollup-plugin-buble';
-import uglify from 'rollup-plugin-uglify';
-import { minify } from 'uglify-es';
+import svelte from 'rollup-plugin-svelte'
+import resolve from 'rollup-plugin-node-resolve'
+import commonjs from 'rollup-plugin-commonjs'
+import buble from 'rollup-plugin-buble'
+import { uglify } from 'rollup-plugin-uglify'
+import { minify } from 'uglify-es'
 // import cleanup from 'rollup-plugin-cleanup';
-import gzip from "rollup-plugin-gzip";
-import livereload from 'rollup-plugin-livereload';
-import sass from 'node-sass';
+import gzip from 'rollup-plugin-gzip'
+import livereload from 'rollup-plugin-livereload'
+import sass from 'node-sass'
 
-const production = !process.env.ROLLUP_WATCH;
+const production = !process.env.ROLLUP_WATCH
 
 export default {
-  input: 'src/main.js', 
+  input: 'src/main.js',
   output: {
-    sourcemap: true,  
+    sourcemap: true,
     format: 'iife',
     file: 'public/bundle.js'
   },
@@ -28,7 +28,7 @@ export default {
       // we'll extract any component CSS out into
       // a separate file — better for performance
       css: css => {
-        css.write('public/bundle.css');
+        css.write('public/bundle.css')
       },
 
       // this results in smaller CSS files
@@ -38,21 +38,21 @@ export default {
         style: ({ content, attributes }) => {
           if (attributes.type !== 'scss') return
 
-          return new Promise((fulfill, reject) => {
+          return new Promise((resolve, reject) => {
             sass.render({
               data: content,
               includePaths: ['src', 'node_modules'],
               sourceMap: true,
               outFile: 'x' // this is necessary, but is ignored
             }, (err, result) => {
-              if (err) return reject(err);
+              if (err) return reject(err)
 
-              fulfill({
+              resolve({
                 code: result.css.toString(),
                 map: result.map.toString()
-              });
-            });
-          });
+              })
+            })
+          })
         }
       }
     }),
@@ -70,6 +70,6 @@ export default {
     production && buble({ exclude: 'node_modules/**' }),
     // production && cleanup(),
     production && uglify({}, minify),
-    production && gzip(),
+    production && gzip()
   ]
-};
+}
