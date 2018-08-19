@@ -11,8 +11,8 @@
   "scripts": {
     "lint": "standard --plugin html src/**/*.html src/**/*.js --fix",
     "build": "webpack",
-    "dev": "serve public & rollup -c -w",
-    "start": "serve public",
+    "dev": "serve dist & webpack --watch",
+    "start": "serve dist",
     "release": "standard-version"
   },
   "dependencies": {},

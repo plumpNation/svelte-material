@@ -29,7 +29,10 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {}
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/'
+            }
           }
         ]
       },
@@ -44,15 +47,14 @@ module.exports = {
               importLoaders: 1
             }
           },
-          // {
-          //   loader: 'postcss-loader',
-          //   options: {}
-          // },
+          {
+            loader: 'postcss-loader'
+          },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: false,
-              includePaths: [src, nodeModules]
+              includePaths: [src, 'node_modules']
             }
           }
         ]
@@ -64,14 +66,14 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name]/[name].min.css'
+      filename: '[name].css'
     }),
     new CopyWebpackPlugin([
       {
-        context: 'components/',
-        from: '**/*',
-        to: './',
-        ignore: [ '*.js', '*.svelte', '*.css', '*.snap', '__tests__' ]
+        context: 'src/',
+        from: './index.html',
+        to: './index.html'
+        // ignore: [ '*.js', '*.html', '*.scss', '*.css', '*.snap', '__tests__' ]
       }
     ])
   ],

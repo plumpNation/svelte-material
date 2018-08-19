@@ -9,7 +9,7 @@ module.exports = merge(common, {
   target: 'web',
   output: {
     path: path.resolve(root + '/dist'),
-    filename: '[name]/index.js',
+    filename: '[name].js',
     libraryTarget: 'umd'
   }
 })
