@@ -1,10 +1,10 @@
 <i
   ref:self
-  on:click="onClick()"
+  on:click=onClick()
   class="mdc-icon-toggle material-icons {classes}"
   role="button"
-  :data-toggle-on="dataToggleOn"
-  :data-toggle-off="dataToggleOff"
+  data-toggle-on={dataToggleOn}
+  data-toggle-off={dataToggleOff}
 >
   {icon}
 </i>
@@ -35,7 +35,7 @@ export default {
     this.get('mdcIconToggle').destroy()
   },
   computed: {
-    classes: (disabled, primary, accent) => {
+    classes: ({disabled, primary, accent}) => {
       const classList = []
 
       disabled && classList.push('mdc-icon-toggle--disabled')
@@ -44,14 +44,14 @@ export default {
 
       return classList.join(' ')
     },
-    icon: (value, iconOn, iconOff) => {
+    icon: ({value, iconOn, iconOff}) => {
       return value ? iconOn : iconOff
     },
-    dataToggleOn: (iconOn) => {
-      return JSON.stringify({ 'content': iconOn })
+    dataToggleOn: ({iconOn}) => {
+      return JSON.stringify({ content: iconOn })
     },
-    dataToggleOff: (iconOff) => {
-      return JSON.stringify({ 'content': iconOff })
+    dataToggleOff: ({iconOff}) => {
+      return JSON.stringify({ content: iconOff })
     }
   },
   methods: {

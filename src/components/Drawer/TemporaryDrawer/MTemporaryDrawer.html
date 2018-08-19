@@ -5,14 +5,14 @@
             <slot name="toolbarSpacer" />
         </div>
       {/if}
- &#123;    &#123;#if slots['header']}
+      {#if slots['header']}
         <header class="mdc-temporary-drawer__header {headerClasses}">
             <div class="mdc-temporary-drawer__header-content">
                 <slot name="header" />
             </div>
         </header>
       {/if}
- &#123;    &#123;#if slots['default']}
+      {#if slots['default']}
         <nav class="mdc-temporary-drawer__content {contentClasses}">
             <slot />
         </nav>
