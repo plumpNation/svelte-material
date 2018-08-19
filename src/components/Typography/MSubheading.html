@@ -1,10 +1,10 @@
-{#if level < 2}
+{#if (level < 2)}
   <h3 class="{classes}">
-      <slot />
+      <slot></slot>
   </h3>
 {else}
   <h4 class="{classes}">
-      <slot />
+      <slot></slot>
   </h4>
 {/if}
 
@@ -18,8 +18,9 @@ export default {
     }
   },
   computed: {
-    classes: (adjustMargin, level) => {
+    classes: ({adjustMargin, level}) => {
       const classList = ['mdc-typography--subheading' + level]
+
       adjustMargin && classList.push('mdc-typography--adjust-margin')
 
       return classList.join(' ')

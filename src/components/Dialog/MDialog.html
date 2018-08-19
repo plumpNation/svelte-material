@@ -5,24 +5,24 @@
             <MTitle><slot name="header" /></MTitle>
         </header>
       {/if}
-      {#if slots['body']}
+ &#123;    &#123;#if slots['body']}
         <section class="mdc-dialog__body{bodyClasses}">
             <MBody><slot name="body" /></MBody>
         </section>
       {/if}
-      {#if slots['acceptButton'] || slots['cancelButton'] || slots['dialogButton']}
+ &#123;    &#123;#if slots['acceptButton'] || slots['cancelButton'] || slots['dialogButton']}
         <footer class="mdc-dialog__footer">
           {#if slots['acceptButton']}
             <MButton class="mdc-dialog__footer__button mdc-dialog__footer__button--accept">
               <slot name="acceptButton" />
             </MButton>
           {/if}
-          {#if slots['cancelButton']}
+     &#123;    &#123;#if slots['cancelButton']}
             <MButton class="mdc-dialog__footer__button mdc-dialog__footer__button--cancel">
               <slot name="cancelButton" />
             </MButton>
           {/if}
-          {#if slots['dialogButton']}
+     &#123;    &#123;#if slots['dialogButton']}
            <MButton class="mdc-dialog__footer__button">
               <slot name="dialogButton" />
             </MButton>
@@ -62,7 +62,7 @@ export default {
     this.get('mdcDialog').destroy()
   },
   computed: {
-    bodyClasses: scrollable => {
+    bodyClasses: ({ scrollable }) => {
       return scrollable && ' mdc-dialog__body--scrollable'
     }
   },

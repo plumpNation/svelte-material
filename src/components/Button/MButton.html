@@ -1,18 +1,18 @@
-{#if href}
-    <a role="button" ref:self :href :name :disabled class="mdc-button {classes}">
-    {#if icon}
-        <i class="material-icons mdc-button__icon">{icon}</i>
-    {/if}
+&#123;#if href}
+    <a role="button" ref:self {href} {name} {disabled} class="mdc-button &#123;classes}">
+    &#123;#if icon}
+        <i class="material-icons mdc-button__icon">&#123;icon}</i>
+    &#123;/if}
         <slot />
     </a>
-{else}
-    <button ref:self :type :name :disabled class="mdc-button {classes}">
-    {#if icon}
-        <i class="material-icons mdc-button__icon">{icon}</i>
-    {/if}
+&#123;else}
+    <button ref:self {type} {name} {disabled} class="mdc-button &#123;classes}">
+    &#123;#if icon}
+        <i class="material-icons mdc-button__icon">&#123;icon}</i>
+    &#123;/if}
         <slot />
     </button>
-{/if}
+&#123;/if}
 
 <script>
 import { MDCRipple } from '@material/ripple'

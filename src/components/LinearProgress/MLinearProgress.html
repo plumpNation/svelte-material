@@ -41,13 +41,19 @@ export default {
     }
   },
   oncreate () {
-    this.set({mdcLinearProgress: MDCLinearProgress.attachTo(this.refs.self)})
-    const mdcLinearProgress = this.get('mdcLinearProgress')
-    this.set({mdcLinearProgress.determinate: !this.indeterminate})
-    this.set({mdcLinearProgress.reverse: this.reverse})
-    this.set({mdcLinearProgress.progress: this.progress})
-    this.set({mdcLinearProgress.buffer: this.buffer})
-    this.get('open') ? mdcLinearProgress.open() : mdcLinearProgress.close()
+    this.set({mdcLinearProgress: MDCLinearProgress.attachTo(this.refs.self)});
+
+    const {mdcLinearProgress, open} = this.get();
+
+    mdcLinearProgress = {
+      ...mdcLinearProgress,
+      determinate: !this.indeterminate,
+      reverse: this.reverse,
+      progress: this.progress,
+      buffer: this.buffer,
+    };
+
+    open ? mdcLinearProgress.open() : mdcLinearProgress.close()
   },
   ondestroy () {
     this.get('mdcLinearProgress').destroy()

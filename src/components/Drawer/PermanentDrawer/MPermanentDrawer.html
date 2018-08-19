@@ -5,7 +5,7 @@
             <slot name="toolbarSpacer" />
         </div>
       {/if}
-      {#if slots['default']}
+ &#123;    &#123;#if slots['default']}
         <div class="mdc-permanent-drawer__content {contentClasses}">
           <slot />
         </div>
@@ -23,10 +23,10 @@ export default {
     }
   },
   computed: {
-    spacerClasses: primaryToolbarSpacer => {
+    spacerClasses: ({ primaryToolbarSpacer }) => {
       return primaryToolbarSpacer && 'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
     },
-    contentClasses: primaryContent => {
+    contentClasses: ({ primaryContent }) => {
       return primaryContent && 'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
     }
   },

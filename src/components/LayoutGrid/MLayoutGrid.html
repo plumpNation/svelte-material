@@ -11,7 +11,7 @@ export default {
     }
   },
   computed: {
-    classes: (fixedColumnWidth, align) => {
+    classes: ({ fixedColumnWidth, align }) => {
       const classList = []
 
       fixedColumnWidth && classList.push('mdc-layout-grid--fixed-column-width')

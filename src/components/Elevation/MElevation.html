@@ -11,7 +11,7 @@ export default {
     }
   },
   computed: {
-    classes: (level, transition) => {
+    classes: ({ level, transition }) => {
       let calc = 'mdc-elevation--z' + level
       transition && (calc += ' mdc-elevation-transition')
       return calc

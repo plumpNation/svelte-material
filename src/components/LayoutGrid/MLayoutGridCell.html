@@ -15,7 +15,7 @@ export default {
     }
   },
   computed: {
-    classes (span, spanDesktop, spanTablet, spanPhone, align, order) {
+    classes ({ span, spanDesktop, spanTablet, spanPhone, align, order }) {
       const classList = []
 
       span && classList.push('mdc-layout-grid__cell--span-' + span)

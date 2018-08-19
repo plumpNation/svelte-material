@@ -1,4 +1,4 @@
-<button ref:self :type :name :disabled class="mdc-fab material-icons {classes}">
+<button ref:self {type} {name} {disabled} class="mdc-fab material-icons {classes}">
     <span class="mdc-fab__icon">
         {icon}
     </span>
@@ -22,7 +22,7 @@ export default {
     }
   },
   computed: {
-    classes: (mini, absolute, exited, background, color) => {
+    classes: ({ mini, absolute, exited, background, color }) => {
       const classList = []
 
       mini && classList.push('mdc-fab--mini')
