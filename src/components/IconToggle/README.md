@@ -3,10 +3,10 @@
 ### Markup
 
 ```html
-<MIconToggle value="{{iconToggle}}" iconOn="favorite" iconOff="favorite_border" on:input="iconEvent(event.value)" />
+<MIconToggle value="{iconToggle}" iconOn="favorite" iconOff="favorite_border" on:input="iconEvent(event.value)" />
 ```
 
-### Script 
+### Script
 
 ```javascript
 data() {

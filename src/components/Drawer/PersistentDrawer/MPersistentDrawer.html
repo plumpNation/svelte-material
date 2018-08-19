@@ -1,22 +1,22 @@
 <aside ref:self class="mdc-persistent-drawer" v-on="$listeners">
     <nav class="mdc-persistent-drawer__drawer">
-      {{#if slots['toolbarSpacer']}}
-        <div class="mdc-temporary-drawer__toolbar-spacer {{spacerClasses}}">
+      {#if slots['toolbarSpacer']}
+        <div class="mdc-temporary-drawer__toolbar-spacer {spacerClasses}">
             <slot name="toolbarSpacer" />
         </div>
-      {{/if}}
-      {{#if slots['header']}}
-        <header class="mdc-persistent-drawer__header {{headerClasses}}">
+      {/if}
+      {#if slots['header']}
+        <header class="mdc-persistent-drawer__header {headerClasses}">
             <div class="mdc-persistent-drawer__header-content">
                 <slot name="header" />
             </div>
         </header>
-      {{/if}}
-      {{#if slots['default']}}
-        <nav class="mdc-persistent-drawer__content {{contentClasses}}">
+      {/if}
+      {#if slots['default']}
+        <nav class="mdc-persistent-drawer__content {contentClasses}">
             <slot />
         </nav>
-      {{/if}}
+      {/if}
     </nav>
 </aside>
 
@@ -64,6 +64,6 @@ export default {
 }
 </script>
 
-<style type='text/scss'>
+<style type='scss'>
 @import "@material/drawer/mdc-drawer";
 </style>

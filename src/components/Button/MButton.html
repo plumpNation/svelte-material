@@ -1,18 +1,18 @@
-{{#if href}}
-    <a role="button" ref:self :href :name :disabled class="mdc-button {{classes}}">
-    {{#if icon}}
-        <i class="material-icons mdc-button__icon">{{icon}}</i>
-    {{/if}}
+{#if href}
+    <a role="button" ref:self :href :name :disabled class="mdc-button {classes}">
+    {#if icon}
+        <i class="material-icons mdc-button__icon">{icon}</i>
+    {/if}
         <slot />
     </a>
-{{else}}
-    <button ref:self :type :name :disabled class="mdc-button {{classes}}">
-    {{#if icon}}
-        <i class="material-icons mdc-button__icon">{{icon}}</i>
-    {{/if}}
+{else}
+    <button ref:self :type :name :disabled class="mdc-button {classes}">
+    {#if icon}
+        <i class="material-icons mdc-button__icon">{icon}</i>
+    {/if}
         <slot />
     </button>
-{{/if}}
+{/if}
 
 <script>
 import { MDCRipple } from '@material/ripple'
@@ -36,7 +36,7 @@ export default {
     }
   },
   computed: {
-    classes: (raised, unelevated, stroked, dense, compact, background, color) => {
+    classes: ({raised, unelevated, stroked, dense, compact, background, color}) => {
       const classList = []
 
       raised && classList.push('mdc-button--raised')
@@ -59,6 +59,6 @@ export default {
 }
 </script>
 
-<style type='text/scss'>
+<style type='scss'>
 @import "@material/button/mdc-button";
 </style>

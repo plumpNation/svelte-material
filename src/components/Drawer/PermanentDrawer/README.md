@@ -8,7 +8,7 @@
   <MList>
     <m-list-item v-for="item in listItems" :key="item.text">
       <m-icon slot="graphic" :icon="item.icon" />
-      {{item.text}}
+      {item.text}
     </m-list-item>
   </MList>
 </MPermanentDrawer>

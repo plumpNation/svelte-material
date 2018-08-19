@@ -8,7 +8,7 @@
   <m-list>
     <m-list-item v-for="item in listItems" :key="item.text">
       <m-icon slot="graphic" :icon="item.icon"/>
-        {{item.text}}
+        {item.text}
     </m-list-item>
   </m-list>
 </m-temporary-drawer>
@@ -25,7 +25,7 @@ this.$refs.drawer.toggle()
 |------|------|---------|----------|-------------|
 | initialOpen | Boolean | - | false | whether the drawer should be open at start |
 | primaryToolbarSpacer | Boolean | - | false | whether the toolbarSpacer section should be themed as primary color |
-| primaryHeader | Boolean | - | false | whether the header section should be themed as primary color | 
+| primaryHeader | Boolean | - | false | whether the header section should be themed as primary color |
 | primaryContent | Boolean | - | false | whether the content section should be themed as primary color |
 
 Non prop events are mapped to the inner button element.

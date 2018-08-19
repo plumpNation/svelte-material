@@ -1,10 +1,10 @@
-<i  ref:self 
-    on:click="onClick()" 
-    class="mdc-icon-toggle material-icons {{classes}}" 
-    role="button" 
-    :data-toggle-on="dataToggleOn" 
+<i  ref:self
+    on:click="onClick()"
+    class="mdc-icon-toggle material-icons {classes}"
+    role="button"
+    :data-toggle-on="dataToggleOn"
     :data-toggle-off="dataToggleOff" >
-    {{icon}}
+    {icon}
 </i>
 
 <script>
@@ -62,6 +62,6 @@ export default {
 }
 </script>
 
-<style type='text/scss'>
+<style type='scss'>
 @import "@material/icon-toggle/mdc-icon-toggle";
 </style>

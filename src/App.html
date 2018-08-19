@@ -3,7 +3,7 @@
 
     <MDisplay level="2" adjustMargin>svelte-material</MDisplay>
 
-    <MHeadline adjustMargin>{{name}}</MHeadline>
+    <MHeadline adjustMargin>{name}</MHeadline>
 
     <MTitle>Buttons</MTitle>
 
@@ -53,7 +53,7 @@
         <MTitle>Checkboxes</MTitle>
       </MLayoutGridCell>
       <MLayoutGridCell span="1">
-        <MCheckbox model="{{checkboxValue}}" />
+        <MCheckbox model="{checkboxValue}" />
       </MLayoutGridCell>
     </MLayoutGridInner>
 
@@ -147,7 +147,7 @@
       </MLayoutGridCell>
       <MLayoutGridCell span="2">
         <MSubheading level="1">IconToggle</MSubheading>
-        <MIconToggle value="{{iconToggle}}" iconOn="favorite" iconOff="favorite_border" on:input="iconEvent(event.value)" accent />
+        <MIconToggle value="{iconToggle}" iconOn="favorite" iconOff="favorite_border" on:input="iconEvent(event.value)" accent />
       </MLayoutGridCell>
     </MLayoutGridInner>
 
@@ -164,7 +164,7 @@
 </MTheme>
 
 <script>
-  
+
 import { MTheme } from './components/Theme'
 import MButton from './components/Button/MButton.html'
 import { MFab } from './components/Fab'
@@ -251,7 +251,7 @@ export default {
 
 </script>
 
-<style type='text/scss'>
+<style type='scss'>
 
 @import 'theme';
 
