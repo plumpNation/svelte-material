@@ -1,41 +1,24 @@
-<aside>
-    <nav class="mdc-permanent-drawer">
-      {#if slots['toolbarSpacer']}
-        <div class="mdc-permanent-drawer__toolbar-spacer {spacerClasses}">
-            <slot name="toolbarSpacer" />
-        </div>
-      {/if}
-      {#if slots['default']}
-        <div class="mdc-permanent-drawer__content {contentClasses}">
-          <slot />
-        </div>
-      {/if}
-    </nav>
-</aside>
+<nav class="mdc-drawer mdc-drawer--permanent mdc-typography">
+  {#if slots['toolbarSpacer']}
+  <slot name="toolbarSpacer" />
+  {/if}
+  <slot />
+</nav>
 
 <script>
 export default {
   data () {
     return {
       slots: [],
-      primaryToolbarSpacer: false,
-      primaryContent: ''
     }
   },
-  computed: {
-    spacerClasses: ({ primaryToolbarSpacer }) => {
-      return primaryToolbarSpacer && 'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
-    },
-    contentClasses: ({ primaryContent }) => {
-      return primaryContent && 'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
-    }
-  },
+
   oncreate () {
     this.set({ slots: this.options.slots })
   }
 }
 </script>
 
-<style type='scss'>
-@import "@material/drawer/mdc-drawer";
+<style type="text/scss">
+@import "@material/drawer/permanent/mdc-permanent-drawer";
 </style>

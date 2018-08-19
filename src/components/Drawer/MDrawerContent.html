@@ -1,0 +1,19 @@
+{#if slots['default']}
+<nav class="mdc-drawer__content">
+  <slot />
+</nav>
+{/if}
+
+<script>
+  export default {
+    data () {
+      return {
+        slots: [],
+      }
+    },
+
+    oncreate () {
+      this.set({ slots: this.options.slots })
+    }
+  }
+</script>
