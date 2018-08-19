@@ -1,4 +1,8 @@
-<li class="mdc-list-item" aria-selected={selected}>
+<li class="mdc-list-item {classes}" aria-selected={selected}>
+  {#if icon}
+  <MIcon {icon} />
+  {/if}
+
   <slot />
 </li>
 
@@ -7,7 +11,19 @@
     data() {
       return {
         selected: false,
+        icon: null,
       }
+    },
+    computed: {
+      classes({icon, selected}) {
+        const classes = []
+
+        if (icon) classes.push('mdc-list-item__graphic')
+        if (selected) classes.push('mdc-list-item--selected')
+      }
+    },
+    components: {
+      MIcon: '../Icon/MIcon.html'
     }
   }
 </script>
