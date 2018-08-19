@@ -36,7 +36,7 @@ export default {
 
       preprocess: {
         style: ({ content, attributes }) => {
-          if (attributes.type !== 'text/scss') return;
+          if (attributes.type !== 'scss') return
 
           return new Promise((fulfill, reject) => {
             sass.render({
