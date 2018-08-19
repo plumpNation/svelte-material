@@ -36,9 +36,10 @@ export default {
 
       preprocess: {
         style: ({ content, attributes }) => {
-          if (attributes.type !== 'scss') return
+          if (attributes.type !== 'text/scss') return
 
-          return new Promise((resolve, reject) => {
+          // eslint-disable-next-line
+          return new Promise((fulfill, reject) => {
             sass.render({
               data: content,
               includePaths: ['src', 'node_modules'],
@@ -47,7 +48,7 @@ export default {
             }, (err, result) => {
               if (err) return reject(err)
 
-              resolve({
+              fulfill({
                 code: result.css.toString(),
                 map: result.map.toString()
               })
