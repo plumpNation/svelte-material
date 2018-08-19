@@ -161,12 +161,15 @@
 
     <MLayoutGridInner>
       <MLayoutGridCell>
-        <MList>
-          <MListItem>
-            <MIcon icon="edit"></MIcon>
-            I am just a boy
-          </MListItem>
-        </MList>
+        <MPermanentDrawer>
+          <MDrawerContent>
+            <MList>
+              <MListItem icon="edit">
+                I am just a boy
+              </MListItem>
+            </MList>
+          </MDrawerContent>
+        </MPermanentDrawer>
       </MLayoutGridCell>
     </MLayoutGridInner>
 
@@ -200,11 +203,14 @@ import {
 } from './components/Card'
 import { MCheckbox } from './components/Checkbox'
 import { MDialog } from './components/Dialog'
+
 import {
   MPermanentDrawer,
   MPersistentDrawer,
-  MTemporaryDrawer
+  MTemporaryDrawer,
+  MDrawerContent
 } from './components/Drawer'
+
 import { MElevation } from './components/Elevation'
 import { MIcon } from './components/Icon'
 import { MIconToggle } from './components/IconToggle'
@@ -233,6 +239,7 @@ export default {
       MPermanentDrawer,
       MPersistentDrawer,
       MTemporaryDrawer,
+      MDrawerContent,
       MElevation,
       MIcon,
       MIconToggle,
@@ -267,8 +274,6 @@ export default {
 
 </script>
 
-<style type="text/scss">
-
-@import 'theme';
-
+<style>
+  @import 'theme';
 </style>

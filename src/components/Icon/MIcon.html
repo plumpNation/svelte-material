@@ -1,29 +1,27 @@
-<i class="material-icons {classes}" on:click="clicked()" aria-hidden="true">
-  {icon}
-</i>
+<i class="mdc-icon {icon} {classes}" on:click="clicked()" aria-hidden="true"></i>
 
 <script>
-export default {
-  data () {
-    return {
-      icon: '',
-      inDrawer: false
-    }
-  },
-  computed: {
-    classes({inDrawer}) {
-      const classes = [];
+  export default {
+    data () {
+      return {
+        icon: '',
+        inDrawer: false
+      }
+    },
+    computed: {
+      classes({inDrawer}) {
+        const classes = [];
 
-      if (inDrawer) classes.push('mdc-list-item__graphic');
+        if (inDrawer) classes.push('mdc-list-item__graphic');
 
-      return classes;
-    }
-  },
-  methods: {
-    clicked () {
-      this.fire('icon-clicked')
-      console.log('icon-clicked')
+        return classes;
+      }
+    },
+    methods: {
+      clicked () {
+        this.fire('icon-clicked')
+        console.log('icon-clicked')
+      }
     }
   }
-}
 </script>

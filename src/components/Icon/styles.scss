@@ -1,0 +1,11 @@
+.mdc-icon {
+  background-size: cover;
+  display: inline-block;
+  height: 24px;
+  vertical-align: middle;
+  width: 24px;
+
+  &.edit {
+    background-image: url("./icons/baseline-edit-24px.svg");
+  }
+}
