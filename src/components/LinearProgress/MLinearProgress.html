@@ -23,30 +23,35 @@ export default {
       buffer: 0
     }
   },
-  observe: {
-    progress () {
-      this.mdcLinearProgress.progress(this.progress)
-    },
-    buffer () {
-      this.mdcLinearProgress.buffer(this.buffer)
-    },
-    indeterminate () {
-      this.mdcLinearProgress.determinate = !this.indeterminate
-    },
-    reversed () {
-      this.mdcLinearProgress.reverse = this.reversed
-    },
-    open () {
-      this.open ? this.mdcLinearProgress.open() : this.mdcLinearProgress.close()
-    }
-  },
+
+  // observe: {
+  //   progress () {
+  //     this.mdcLinearProgress.progress(this.progress)
+  //   },
+  //   buffer () {
+  //     this.mdcLinearProgress.buffer(this.buffer)
+  //   },
+  //   indeterminate () {
+  //     this.mdcLinearProgress.determinate = !this.indeterminate
+  //   },
+  //   reversed () {
+  //     this.mdcLinearProgress.reverse = this.reversed
+  //   },
+  //   open () {
+  //     this.open ? this.mdcLinearProgress.open() : this.mdcLinearProgress.close()
+  //   }
+  // },
+
   oncreate () {
     this.set({mdcLinearProgress: MDCLinearProgress.attachTo(this.refs.self)})
+
     const mdcLinearProgress = this.get('mdcLinearProgress')
-    this.set({mdcLinearProgress.determinate: !this.indeterminate})
-    this.set({mdcLinearProgress.reverse: this.reverse})
-    this.set({mdcLinearProgress.progress: this.progress})
-    this.set({mdcLinearProgress.buffer: this.buffer})
+
+    mdcLinearProgress.determinate = !this.indeterminate
+    mdcLinearProgress.reverse = this.reverse
+    mdcLinearProgress.progress = this.progress
+    mdcLinearProgress.buffer = this.buffer
+
     this.get('open') ? mdcLinearProgress.open() : mdcLinearProgress.close()
   },
   ondestroy () {
