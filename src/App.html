@@ -155,7 +155,7 @@
 
     <MLayoutGridInner>
       <MLayoutGridCell>
-        <!-- <MLinearProgress ref="progress" open progress="0.5" buffer="0.5" indeterminate /> -->
+        <MLinearProgress ref="progress" open progress="0.5" buffer="0.5" indeterminate />
       </MLayoutGridCell>
     </MLayoutGridInner>
 
@@ -173,53 +173,55 @@
       </MLayoutGridCell>
     </MLayoutGridInner>
 
+    <MCardMediaItem></MCardMediaItem>
   </MLayoutGrid>
 </MTheme>
 
 <script>
+  import { MTheme } from './components/Theme'
+  import { MLinearProgress } from './components/LinearProgress'
+  import MButton from './components/Button/MButton.html'
+  import { MFab } from './components/Fab'
+  import {
+    MLayoutGrid,
+    MLayoutGridCell,
+    MLayoutGridInner
+  } from './components/LayoutGrid'
+  import {
+    MBody,
+    MButtonLabel,
+    MCaption,
+    MDisplay,
+    MHeadline,
+    MTitle,
+    MSubtitle,
+    MTypography
+  } from './components/Typography'
+  import {
+    MCard,
+    MCardMediaItem
+  } from './components/Card'
+  import { MCheckbox } from './components/Checkbox'
+  import { MDialog } from './components/Dialog'
 
-import { MTheme } from './components/Theme'
-import { MLinearProgress } from './components/LinearProgress'
-import MButton from './components/Button/MButton.html'
-import { MFab } from './components/Fab'
-import {
-  MLayoutGrid,
-  MLayoutGridCell,
-  MLayoutGridInner
-} from './components/LayoutGrid'
-import {
-  MBody,
-  MButtonLabel,
-  MCaption,
-  MDisplay,
-  MHeadline,
-  MTitle,
-  MSubtitle,
-  MTypography
-} from './components/Typography'
-import {
-  MCard,
-  MCardMediaItem
-} from './components/Card'
-import { MCheckbox } from './components/Checkbox'
-import { MDialog } from './components/Dialog'
+  import {
+    MPermanentDrawer,
+    MPersistentDrawer,
+    MTemporaryDrawer,
+    MDrawerContent
+  } from './components/Drawer'
 
-import {
-  MPermanentDrawer,
-  MPersistentDrawer,
-  MTemporaryDrawer,
-  MDrawerContent
-} from './components/Drawer'
+  import { MElevation } from './components/Elevation'
+  import { MIcon } from './components/Icon'
+  import { MIconToggle } from './components/IconToggle'
+  import {
+    MList,
+    MListItem
+  } from './components/List'
 
-import { MElevation } from './components/Elevation'
-import { MIcon } from './components/Icon'
-import { MIconToggle } from './components/IconToggle'
-import {
-  MList,
-  MListItem
-} from './components/List'
+  import './theme.scss'
 
-export default {
+  export default {
     components: {
       MTheme,
       MLayoutGrid,
@@ -247,6 +249,7 @@ export default {
       MList,
       MListItem
     },
+
     data () {
       return {
         customStyles: {
@@ -256,6 +259,11 @@ export default {
         iconToggle: false
       }
     },
+
+    oncreate () {
+      console.log(this)
+    },
+
     methods: {
       dialogAccepted () {
         console.log('dialogAccepted')
@@ -267,13 +275,5 @@ export default {
         console.log('IconToggle clicked', value)
       }
     },
-    oncreate () {
-      console.log(this)
-    }
-}
-
+  }
 </script>
-
-<style>
-  @import 'theme';
-</style>

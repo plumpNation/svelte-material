@@ -20,20 +20,20 @@
 
 <script>
   export default {
-    data() {
+    data () {
       return {
         selected: false,
         icon: null,
-        href: null,
+        href: null
       }
     },
     computed: {
-      classes({icon, selected}) {
+      classes ({icon, selected}) {
         const classes = []
 
         if (selected) classes.push('mdc-list-item--selected')
 
-        return classes;
+        return classes
       }
     },
     components: {

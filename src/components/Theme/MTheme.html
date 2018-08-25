@@ -3,19 +3,17 @@
 </div>
 
 <script>
-export default {
-  data () {
-    return {
-      dark: '',
-      customStyles: ''
-    }
-  },
-  computed: {
-    classes: ({ dark }) => 'mdc-theme--dark'
-  }
-}
-</script>
+  import './styles.scss'
 
-<style type="text/scss">
-@import "@material/theme/mdc-theme";
-</style>
+export default {
+    data () {
+      return {
+        dark: '',
+        customStyles: ''
+      }
+    },
+    computed: {
+      classes: ({ dark }) => 'mdc-theme--dark'
+    }
+  }
+</script>

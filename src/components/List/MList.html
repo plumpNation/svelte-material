@@ -9,26 +9,26 @@ export default {
   data () {
     return {
       orientation: 'vertical',
-      selection: 'single', // single
-    };
+      selection: 'single' // single
+    }
   },
 
-  oncreate() {
-    this.mdcList = new MDCList(this.refs.root);
+  oncreate () {
+    this.mdcList = new MDCList(this.refs.root)
 
-    this.updateList(this.get());
+    this.updateList(this.get())
   },
 
   methods: {
-    updateList({ selection }) {
+    updateList ({ selection }) {
       if (selection === 'single') {
-        this.mdcList.singleSelection = true;
+        this.mdcList.singleSelection = true
       }
     }
   },
 
-  ondestroy() {
-    this.mdcList.destroy();
+  ondestroy () {
+    this.mdcList.destroy()
   }
 }
 </script>

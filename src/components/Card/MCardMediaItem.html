@@ -1,19 +1,17 @@
 <img class="mdc-card__media-item {classes}" alt="altText" />
 
 <script>
-export default {
-  data () {
-    return {
-      altText: '',
-      height: 1
-    }
-  },
-  computed: {
-    classes: ({ height }) => 'mdc-card__media-item--' + height + 'x'
-  }
-}
-</script>
+  import './styles.scss'
 
-<style type="text/scss">
-@import "@material/card/mdc-card";
-</style>
+  export default {
+    data () {
+      return {
+        altText: '',
+        height: 1
+      }
+    },
+    computed: {
+      classes: ({ height }) => `mdc-card__media-item--${height}x`
+    }
+  }
+</script>

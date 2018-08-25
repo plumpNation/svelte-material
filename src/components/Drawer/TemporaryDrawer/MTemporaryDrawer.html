@@ -23,49 +23,64 @@
 </aside>
 
 <script>
-import { MDCTemporaryDrawer } from '@material/drawer'
+  import { MDCTemporaryDrawer } from '@material/drawer'
 
-export default {
-  data () {
-    return {
-      slots: [],
-      initialOpen: false,
-      primaryHeader: '',
-      primaryToolbarSpacer: false,
-      primaryContent: '',
-      open: false,
-      mdcTemporaryDrawer: false
-    }
-  },
-  computed: {
-    spacerClasses: ({ primaryToolbarSpacer }) => {
-      return primaryToolbarSpacer && 'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
+  import './styles.scss'
+
+  export default {
+    data () {
+      return {
+        slots: [],
+        initialOpen: false,
+        primaryHeader: '',
+        primaryToolbarSpacer: false,
+        primaryContent: '',
+        open: false,
+        mdcTemporaryDrawer: false
+      }
     },
-    headerClasses: ({ primaryHeader }) => {
-      return primaryHeader && 'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
+
+    computed: {
+      spacerClasses: ({ primaryToolbarSpacer }) => {
+        return primaryToolbarSpacer &&
+          'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
+      },
+      headerClasses: ({ primaryHeader }) => {
+        return primaryHeader &&
+          'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
+      },
+      contentClasses: ({ primaryContent }) => {
+        return primaryContent &&
+          'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
+      }
     },
-    contentClasses: ({ primaryContent }) => {
-      return primaryContent && 'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
+
+    methods: {
+      toggle () {
+        const { open, mdcPersistentDrawer } = this.get()
+
+        mdcPersistentDrawer.open = open
+
+        this.set({ open: !open, mdcPersistentDrawer })
+      }
+    },
+
+    oncreate () {
+      const { initialOpen } = this.get()
+
+      this.set({
+        slots: this.options.slots,
+        mdcTemporaryDrawer: MDCTemporaryDrawer.attachTo(this.refs.self),
+        open
+      })
+
+      // this.set({ mdcTemporaryDrawer.open: this.get('open') })
+    },
+
+    ondestroy () {
+      const { mdcTemporaryDrawer } = this.get()
+
+      mdcTemporaryDrawer.destroy()
     }
-  },
-  methods: {
-    toggle () {
-      open = !open
-      mdcPersistentDrawer.open = open
-    }
-  },
-  oncreate () {
-    this.set({ slots: this.options.slots })
-    this.set({ mdcTemporaryDrawer: MDCTemporaryDrawer.attachTo(this.refs.self) })
-    this.set({ open: this.get('initialOpen') })
-    // this.set({ mdcTemporaryDrawer.open: this.get('open') })
-  },
-  ondestroy () {
-    this.get('mdcTemporaryDrawer').destroy()
   }
-}
 </script>
-
-<style type="text/scss">
-@import "@material/drawer/mdc-drawer";
-</style>

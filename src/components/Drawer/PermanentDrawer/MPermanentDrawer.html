@@ -8,19 +8,17 @@
 </aside>
 
 <script>
+  import './styles.scss'
+
 export default {
-  data () {
-    return {
-      slots: [],
+    data () {
+      return {
+        slots: []
+      }
+    },
+
+    oncreate () {
+      this.set({ slots: this.options.slots })
     }
-  },
-
-  oncreate () {
-    this.set({ slots: this.options.slots })
   }
-}
 </script>
-
-<style type="text/scss">
-  @import "@material/drawer/permanent/mdc-permanent-drawer";
-</style>

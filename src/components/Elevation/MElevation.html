@@ -1,25 +1,26 @@
 <div class="{classes}">
-    <slot />
+  <slot />
 </div>
 
 <script>
+  import './styles.scss'
+
 export default {
-  data () {
-    return {
-      level: 1,
-      transition: false
-    }
-  },
-  computed: {
-    classes: ({ level, transition }) => {
-      let calc = 'mdc-elevation--z' + level
-      transition && (calc += ' mdc-elevation-transition')
-      return calc
+    data () {
+      return {
+        level: 1,
+        transition: false
+      }
+    },
+
+    computed: {
+      classes: ({ level, transition }) => {
+        let calc = 'mdc-elevation--z' + level
+
+        transition && (calc += ' mdc-elevation-transition')
+
+        return calc
+      }
     }
   }
-}
 </script>
-
-<style type="text/scss">
-@import "@material/elevation/mdc-elevation";
-</style>

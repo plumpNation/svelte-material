@@ -19,5 +19,13 @@ export {
   MLayoutGrid,
   MLayoutGridCell,
   MLayoutGridInner,
-  MTheme
+  MTheme,
+  MBody,
+  MButtonLabel,
+  MCaption,
+  MDisplay,
+  MHeadline,
+  MTitle,
+  MSubtitle,
+  MTypography
 }

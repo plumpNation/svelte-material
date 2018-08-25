@@ -1,26 +1,25 @@
 <h1 class="{classes}">
-    <slot />
+  <slot />
 </h1>
 
 <script>
-export default {
-  data () {
-    return {
-      adjustMargin: '',
-      level: 1
-    }
-  },
-  computed: {
-    classes: ({ adjustMargin, level }) => {
-      const classList = ['mdc-typography--display' + level]
-      adjustMargin && classList.push('mdc-typography--adjust-margin')
+  import './styles.scss'
 
-      return classList.join(' ')
+  export default {
+    data () {
+      return {
+        adjustMargin: '',
+        level: 1
+      }
+    },
+
+    computed: {
+      classes: ({ adjustMargin, level }) => {
+        const classList = ['mdc-typography--display' + level]
+        adjustMargin && classList.push('mdc-typography--adjust-margin')
+
+        return classList.join(' ')
+      }
     }
   }
-}
 </script>
-
-<style type="text/scss">
-@import "@material/typography/mdc-typography";
-</style>

@@ -1,91 +1,92 @@
 <div ref:self role="progressbar" class="mdc-linear-progress">
-    <div class="mdc-linear-progress__buffering-dots"></div>
-    <div class="mdc-linear-progress__buffer"></div>
-    <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
-        <span class="mdc-linear-progress__bar-inner"></span>
-    </div>
-    <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
-        <span class="mdc-linear-progress__bar-inner"></span>
-    </div>
+  <div class="mdc-linear-progress__buffering-dots"></div>
+  <div class="mdc-linear-progress__buffer"></div>
+  <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+    <span class="mdc-linear-progress__bar-inner"></span>
+  </div>
+  <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+    <span class="mdc-linear-progress__bar-inner"></span>
+  </div>
 </div>
 
 <script>
-import { MDCLinearProgress } from '@material/linear-progress'
+  import { MDCLinearProgress } from '@material/linear-progress'
 
-export default {
-  data () {
-    return {
-      mdcLinearProgress: null,
-      open: false,
-      indeterminate: false,
-      reverse: false,
-      progress: 0,
-      buffer: 0
-    }
-  },
-
-  onstate({ changed }) {
-    this.updateMDCLinearProgress(changed);
-  },
-
-  oncreate () {
-    this.set({mdcLinearProgress: MDCLinearProgress.attachTo(this.refs.self)});
-
-    this.updateMDCLinearProgress(this.get());
-  },
-
-  ondestroy () {
-    const { mdcLinearProgress } = this.get();
-
-    mdcLinearProgress.destroy();
-  },
-
-  methods: {
-    show () {
-      const { mdcLinearProgress } = this.get();
-
-      mdcLinearProgress.open()
-    },
-    hide () {
-      const { mdcLinearProgress } = this.get();
-
-      mdcLinearProgress.close()
+  export default {
+    data () {
+      return {
+        mdcLinearProgress: null,
+        open: false,
+        indeterminate: false,
+        reverse: false,
+        progress: 0,
+        buffer: 0
+      }
     },
 
-    /**
-     * Called by oncreate and onstate, so must support properties not existing.
-     */
-    updateMDCLinearProgress({
-      progress,
-      buffer,
-      indeterminate,
-      reversed,
-      open
-    }) {
-      const { mdcLinearProgress } = this.get();
+    onstate ({ changed }) {
+      this.updateMDCLinearProgress(changed)
+    },
 
-      if (progress) {
-        mdcLinearProgress.progress(progress)
+    oncreate () {
+      const mdcLinearProgress = MDCLinearProgress.attachTo(this.refs.self)
+
+      this.set({ mdcLinearProgress })
+
+      this.updateMDCLinearProgress(this.get())
+    },
+
+    ondestroy () {
+      const { mdcLinearProgress } = this.get()
+
+      mdcLinearProgress.destroy()
+    },
+
+    methods: {
+      show () {
+        const { mdcLinearProgress } = this.get()
+
+        mdcLinearProgress.open()
+      },
+
+      hide () {
+        const { mdcLinearProgress } = this.get()
+
+        mdcLinearProgress.close()
+      },
+
+      /**
+       * Called by oncreate and onstate, so must support properties not existing.
+       */
+      updateMDCLinearProgress ({
+        progress,
+        buffer,
+        indeterminate,
+        reversed,
+        open
+      }) {
+        const { mdcLinearProgress } = this.get()
+
+        if (!mdcLinearProgress) return
+
+        if (progress) {
+          mdcLinearProgress.progress(progress)
+        }
+
+        if (buffer) {
+          mdcLinearProgress.buffer(buffer)
+        }
+
+        if (indeterminate) {
+          mdcLinearProgress.determinate = !indeterminate
+        }
+
+        if (reversed) {
+          mdcLinearProgress.reverse = reversed
+        }
+
+        open ? mdcLinearProgress.open() : mdcLinearProgress.close()
       }
-
-      if (buffer) {
-        mdcLinearProgress.buffer(buffer)
-      }
-
-      if (determinate) {
-        mdcLinearProgress.determinate = !indeterminate
-      }
-
-      if (reversed) {
-        mdcLinearProgress.reverse = reversed
-      }
-
-      open ? mdcLinearProgress.open() : mdcLinearProgress.close()
     }
   }
-}
 </script>
-
-<style type="text/scss">
-@import "@material/linear-progress/mdc-linear-progress";
-</style>

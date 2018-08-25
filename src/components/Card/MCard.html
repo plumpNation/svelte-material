@@ -34,27 +34,25 @@
 </div>
 
 <script>
-export default {
-  data () {
-    return {
-      classList: [],
-      slots: [],
-      verticalActions: '',
-      largeTitle: 'yes',
-      horizontal: ''
-    }
-  },
-  oncreate () {
-    this.set({ slots: this.options.slots })
-  },
-  computed: {
-    isHorizontal: ({horizontal}) => horizontal && 'mdc-card__horizontal-block',
-    classesActions: ({verticalActions}) => verticalActions && 'mdc-card__actions--vertical',
-    classesTitle: ({largeTitle}) => largeTitle && 'mdc-card__title--large'
-  }
-}
-</script>
+  import './styles.scss'
 
-<style type="text/scss">
-@import "@material/card/mdc-card";
-</style>
+export default {
+    data () {
+      return {
+        classList: [],
+        slots: [],
+        verticalActions: '',
+        largeTitle: 'yes',
+        horizontal: ''
+      }
+    },
+    oncreate () {
+      this.set({ slots: this.options.slots })
+    },
+    computed: {
+      isHorizontal: ({horizontal}) => horizontal && 'mdc-card__horizontal-block',
+      classesActions: ({verticalActions}) => verticalActions && 'mdc-card__actions--vertical',
+      classesTitle: ({largeTitle}) => largeTitle && 'mdc-card__title--large'
+    }
+  }
+</script>
