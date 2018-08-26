@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "standard --plugin html src/**/*.html src/**/*.js --fix",
     "build": "webpack",
-    "dev": "serve dist & webpack --watch",
+    "dev": "webpack --watch",
     "start": "serve dist",
     "release": "standard-version"
   },
