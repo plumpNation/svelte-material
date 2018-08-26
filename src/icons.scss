@@ -1,0 +1,12 @@
+$material-icons-font-path: '~material-icons/iconfont/';
+
+@import '~material-icons/iconfont/variables';
+@import '~material-icons/iconfont/mixins';
+
+// I am not importing the scss from the material-icons dependency, nor the fonts.
+// They are coming from google fonts.
+// @see index.html
+
+.material-icons {
+  @include material-icons();
+}

@@ -59,10 +59,19 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.woff?(2)$/,
+        // exclude: /node_modules/,
+        loader: 'file-loader',
+      },
+      { test: /\.(ttf|eot|svg)$/,
+        // exclude: /node_modules/,
+        loader: 'file-loader',
+      },
     ],
   },
   resolve: {
-    extensions: ['.js', '.json', '.css', '.scss', '.svelte'],
+    extensions: ['.js', '.json', '.css', '.scss', '.svelte', '.woff', '.woff2', '.eot', '.ttf'],
   },
   plugins: [
     new MiniCssExtractPlugin({
