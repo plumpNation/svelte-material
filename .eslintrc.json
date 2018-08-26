@@ -8,6 +8,7 @@
     "html/html-extensions": [".html", ".svelte"]
   },
   "rules": {
-    "no-parsing-error": 0
+    "no-parsing-error": 0,
+    "comma-dangle": [2, "always-multiline"]
   }
 }

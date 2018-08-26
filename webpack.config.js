@@ -10,6 +10,6 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(root + '/dist'),
     filename: '[name].js',
-    libraryTarget: 'umd'
-  }
+    libraryTarget: 'umd',
+  },
 })

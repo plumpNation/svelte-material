@@ -12,52 +12,48 @@
 </nav>
 
 <script>
-import { MDCRipple } from '@material/ripple'
+  import './styles.scss'
 
-export default {
-  data () {
-    return {
-      mdcRipple: null,
-      icon: '',
-      raised: '',
-      unelevated: '',
-      stroked: '',
-      dense: '',
-      compact: '',
-      disabled: '',
-      name: '',
-      href: '',
-      type: '',
-      background: '',
-      color: ''
-    }
-  },
-  computed: {
-    classes: ({ raised, unelevated, stroked, dense, compact, background, color }) => {
-      const classList = []
+  import { MDCRipple } from '@material/ripple'
 
-      raised && classList.push('mdc-button--raised')
-      unelevated && classList.push('mdc-button--unelevated')
-      stroked && classList.push('mdc-button--stroked')
-      dense && classList.push('mdc-button--dense')
-      compact && classList.push('mdc-button--compact')
-      background && classList.push('mdc-theme--' + background + '-bg')
-      color && classList.push('mdc-theme--' + color)
+  export default {
+    data () {
+      return {
+        mdcRipple: null,
+        icon: '',
+        raised: '',
+        unelevated: '',
+        stroked: '',
+        dense: '',
+        compact: '',
+        disabled: '',
+        name: '',
+        href: '',
+        type: '',
+        background: '',
+        color: '',
+      }
+    },
+    computed: {
+      classes: ({ raised, unelevated, stroked, dense, compact, background, color }) => {
+        const classList = []
 
-      return classList.join(' ')
-    }
-  },
-  oncreate () {
-    this.set({ mdcRipple: MDCRipple.attachTo(this.refs.self) })
-  },
-  ondestroy () {
-    this.get('mdcRipple').destroy()
+        raised && classList.push('mdc-button--raised')
+        unelevated && classList.push('mdc-button--unelevated')
+        stroked && classList.push('mdc-button--stroked')
+        dense && classList.push('mdc-button--dense')
+        compact && classList.push('mdc-button--compact')
+        background && classList.push('mdc-theme--' + background + '-bg')
+        color && classList.push('mdc-theme--' + color)
+
+        return classList.join(' ')
+      },
+    },
+    oncreate () {
+      this.set({ mdcRipple: MDCRipple.attachTo(this.refs.self) })
+    },
+    ondestroy () {
+      this.get('mdcRipple').destroy()
+    },
   }
-}
 </script>
-
-<style type="text/scss">
-  @import "@material/tab-scroller/mdc-tab-scroller";
-  @import "@material/tab-indicator/mdc-tab-indicator";
-  @import "@material/tab/mdc-tab";
-</style>

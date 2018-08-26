@@ -43,7 +43,7 @@
         slots: [],
         verticalActions: '',
         largeTitle: 'yes',
-        horizontal: ''
+        horizontal: '',
       }
     },
     oncreate () {
@@ -52,7 +52,7 @@
     computed: {
       isHorizontal: ({horizontal}) => horizontal && 'mdc-card__horizontal-block',
       classesActions: ({verticalActions}) => verticalActions && 'mdc-card__actions--vertical',
-      classesTitle: ({largeTitle}) => largeTitle && 'mdc-card__title--large'
-    }
+      classesTitle: ({largeTitle}) => largeTitle && 'mdc-card__title--large',
+    },
   }
 </script>

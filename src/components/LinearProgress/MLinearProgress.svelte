@@ -19,7 +19,7 @@ export default {
         indeterminate: false,
         reverse: false,
         progress: 0,
-        buffer: 0
+        buffer: 0,
       }
     },
 
@@ -60,7 +60,7 @@ export default {
         buffer,
         indeterminate,
         reversed,
-        open
+        open,
       }) {
         if (!this.mdcLinearProgress) return
 
@@ -81,7 +81,7 @@ export default {
         }
 
         open ? this.mdcLinearProgress.open() : this.mdcLinearProgress.close()
-      }
-    }
+      },
+    },
   }
 </script>

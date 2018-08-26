@@ -3,5 +3,5 @@ import MCardMediaItem from './MCardMediaItem'
 
 export {
   MCard,
-  MCardMediaItem
+  MCardMediaItem,
 }

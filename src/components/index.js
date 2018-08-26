@@ -27,5 +27,5 @@ export {
   MHeadline,
   MTitle,
   MSubtitle,
-  MTypography
+  MTypography,
 }

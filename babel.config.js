@@ -8,9 +8,9 @@ module.exports = function (api) {
         '@babel/preset-env',
         {
           'targets': {
-            'node': 'current'
-          }
-        }
+            'node': 'current',
+          },
+        },
       ])
       break
     case 'development':
@@ -21,8 +21,8 @@ module.exports = function (api) {
       presets.push([
         '@babel/preset-env',
         {
-          'modules': false
-        }
+          'modules': false,
+        },
       ])
       break
     case 'production':
@@ -33,8 +33,8 @@ module.exports = function (api) {
       presets.push([
         '@babel/preset-env',
         {
-          'modules': false
-        }
+          'modules': false,
+        },
       ])
   }
 

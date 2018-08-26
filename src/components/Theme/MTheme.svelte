@@ -9,11 +9,11 @@ export default {
     data () {
       return {
         dark: '',
-        customStyles: ''
+        customStyles: '',
       }
     },
     computed: {
-      classes: ({ dark }) => 'mdc-theme--dark'
-    }
+      classes: ({ dark }) => 'mdc-theme--dark',
+    },
   }
 </script>

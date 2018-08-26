@@ -18,7 +18,7 @@ export default {
       name: '',
       type: '',
       color: '',
-      background: ''
+      background: '',
     }
   },
   computed: {
@@ -32,13 +32,13 @@ export default {
       color && classList.push('mdc-theme--' + color)
 
       return classList.join(' ')
-    }
+    },
   },
   oncreate () {
     this.set({ mdcRipple: MDCRipple.attachTo(this.refs.self) })
   },
   ondestroy () {
     this.get('mdcRipple').destroy()
-  }
+  },
 }
 </script>

@@ -9,22 +9,29 @@
   <span>
     <slot />
   </span>
-  {#if}
+  {/if}
 </a>
 
 <script>
-  import { MDCTab } from '@material/tabs'
+  import { MDCTab } from '@material/tab'
 
-  import MIcon from '../Icon/MIcon.html'
+  import MIcon from '../Icon/MIcon.svelte'
 
   export default {
     components: {
-      MIcon
+      MIcon,
     },
-    classes: ({active, hasIcon, label}) => ({
-      'mdc-tab--active': active,
-      'mdc-tab--with-icon-and-text': hasIcon && label
-    }),
-    hasIcon: ({slots}) => !!slots.icon
+
+    oncreate () {
+      this.tab = new MDCTab(document.querySelector('.mdc-tab'))
+    },
+
+    computed: {
+      classes: ({active, hasIcon, label}) => ({
+        'mdc-tab--active': active,
+        'mdc-tab--with-icon-and-text': hasIcon && label,
+      }),
+      hasIcon: ({slots}) => !!slots.icon,
+    },
   }
 </script>

@@ -7,11 +7,11 @@
     data () {
       return {
         altText: '',
-        height: 1
+        height: 1,
       }
     },
     computed: {
-      classes: ({ height }) => `mdc-card__media-item--${height}x`
-    }
+      classes: ({ height }) => `mdc-card__media-item--${height}x`,
+    },
   }
 </script>

@@ -51,20 +51,20 @@
 
 import {
     MBody,
-    MTitle
+    MTitle,
   } from '../Typography'
 
   export default {
     components: {
       MButton,
       MBody,
-      MTitle
+      MTitle,
     },
     data () {
       return {
         slots: [],
         scrollable: false,
-        mdcDialog: null
+        mdcDialog: null,
       }
     },
     oncreate () {
@@ -77,7 +77,7 @@ import {
     computed: {
       bodyClasses: ({ scrollable }) => {
         return scrollable && ' mdc-dialog__body--scrollable'
-      }
+      },
     },
     methods: {
       onAccept () {
@@ -88,7 +88,7 @@ import {
       },
       show () {
         this.mdcDialog.show()
-      }
-    }
+      },
+    },
   }
 </script>

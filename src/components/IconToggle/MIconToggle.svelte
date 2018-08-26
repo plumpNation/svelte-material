@@ -24,7 +24,7 @@
         disabled: false,
         primary: false,
         accent: false,
-        value: false
+        value: false,
       }
     },
 
@@ -56,7 +56,7 @@
       },
       dataToggleOff: ({iconOff}) => {
         return JSON.stringify({ content: iconOff })
-      }
+      },
     },
 
     methods: {
@@ -64,7 +64,7 @@
         this.set({ value: !this.get('value') })
         const value = this.get('value')
         debounce(this.fire('input', { value }))
-      }
-    }
+      },
+    },
   }
 </script>

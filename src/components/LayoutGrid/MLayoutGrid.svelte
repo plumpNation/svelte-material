@@ -9,7 +9,7 @@ export default {
     data () {
       return {
         fixedColumnWidth: '',
-        align: ''
+        align: '',
       }
     },
     computed: {
@@ -21,7 +21,7 @@ export default {
         align === 'right' && classList.push('mdc-layout-grid--align-right')
 
         return classList.join(' ')
-      }
-    }
+      },
+    },
   }
 </script>

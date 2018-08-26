@@ -5,7 +5,7 @@
     data () {
       return {
         icon: '',
-        inDrawer: false
+        inDrawer: false,
       }
     },
     computed: {
@@ -15,13 +15,13 @@
         if (inDrawer) classes.push('mdc-list-item__graphic')
 
         return classes
-      }
+      },
     },
     methods: {
       clicked () {
         this.fire('icon-clicked')
         console.log('icon-clicked')
-      }
-    }
+      },
+    },
   }
 </script>

@@ -8,12 +8,12 @@
   export default {
     data () {
       return {
-        adjustMargin: ''
+        adjustMargin: '',
       }
     },
     computed: {
-      classes: ({ adjustMargin }) => adjustMargin && 'mdc-typography--adjust-margin'
-    }
+      classes: ({ adjustMargin }) => adjustMargin && 'mdc-typography--adjust-margin',
+    },
   }
 </script>
 

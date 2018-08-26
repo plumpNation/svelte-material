@@ -9,7 +9,7 @@ export default {
     data () {
       return {
         level: 1,
-        transition: false
+        transition: false,
       }
     },
 
@@ -20,7 +20,7 @@ export default {
         transition && (calc += ' mdc-elevation-transition')
 
         return calc
-      }
-    }
+      },
+    },
   }
 </script>

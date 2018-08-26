@@ -16,7 +16,7 @@
     data () {
       return {
         adjustMargin: '',
-        level: 1
+        level: 1,
       }
     },
 
@@ -27,7 +27,7 @@
         adjustMargin && classList.push('mdc-typography--adjust-margin')
 
         return classList.join(' ')
-      }
-    }
+      },
+    },
   }
 </script>

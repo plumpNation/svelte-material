@@ -13,7 +13,7 @@
         spanTablet: '',
         spanPhone: '',
         order: '',
-        align: ''
+        align: '',
       }
     },
 
@@ -29,7 +29,7 @@
         order && classList.push('mdc-layout-grid__cell--order-' + order)
 
         return classList.join(' ')
-      }
-    }
+      },
+    },
   }
 </script>

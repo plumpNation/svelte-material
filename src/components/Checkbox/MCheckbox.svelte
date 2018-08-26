@@ -23,7 +23,7 @@
       return {
         checked: false,
         indeterminate: false,
-        mdcCheckbox: null
+        mdcCheckbox: null,
       }
     },
 
@@ -34,6 +34,6 @@
 
     ondestroy () {
       this.get('mdcCheckbox').destroy()
-    }
+    },
   }
 </script>

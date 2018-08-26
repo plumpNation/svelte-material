@@ -24,7 +24,7 @@
       return {
         selected: false,
         icon: null,
-        href: null
+        href: null,
       }
     },
     computed: {
@@ -34,7 +34,7 @@
         if (selected) classes.push('mdc-list-item--selected')
 
         return classes
-      }
+      },
     },
     components: {
       MIcon: '../Icon/MIcon.svelte',

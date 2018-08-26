@@ -36,7 +36,7 @@
         primaryToolbarSpacer: false,
         primaryContent: '',
         open: false,
-        mdcPersistentDrawer: false
+        mdcPersistentDrawer: false,
       }
     },
 
@@ -52,7 +52,7 @@
       contentClasses: ({ primaryContent }) => {
         return primaryContent &&
           'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
-      }
+      },
     },
 
     methods: {
@@ -63,9 +63,9 @@
 
         this.set({
           open: !open,
-          mdcPersistentDrawer
+          mdcPersistentDrawer,
         })
-      }
+      },
     },
 
     oncreate () {
@@ -77,6 +77,6 @@
 
     ondestroy () {
       this.get('mdcPersistentDrawer').destroy()
-    }
+    },
   }
 </script>

@@ -1,7 +1,6 @@
 <nav id="icon-tab-bar" class="mdc-tab-bar mdc-tab-bar--icon-tabs">
-    <slot />
+  <slot />
 </nav>
-
-<style type="text/scss">
-@import "@material/tab-bar/mdc-tab-bar";
-</style>
+<script>
+  import './styles.scss'
+</script>

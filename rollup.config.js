@@ -17,7 +17,7 @@ export default {
     sourcemap: true,
     format: 'iife',
     file: 'public/bundle.js',
-    name: 'app'
+    name: 'app',
   },
   plugins: [
     production || livereload(),
@@ -44,18 +44,18 @@ export default {
               data: content,
               includePaths: ['src', 'node_modules'],
               sourceMap: true,
-              outFile: 'x' // this is necessary, but is ignored
+              outFile: 'x', // this is necessary, but is ignored
             }, (err, result) => {
               if (err) return reject(err)
 
               fulfill({
                 code: result.css.toString(),
-                map: result.map.toString()
+                map: result.map.toString(),
               })
             })
           })
-        }
-      }
+        },
+      },
     }),
 
     // If you have external dependencies installed from
@@ -71,6 +71,6 @@ export default {
     production && buble({ exclude: 'node_modules/**' }),
     // production && cleanup(),
     production && uglify({}, minify),
-    production && gzip()
-  ]
+    production && gzip(),
+  ],
 }

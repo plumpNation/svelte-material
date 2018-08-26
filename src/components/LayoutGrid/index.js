@@ -5,5 +5,5 @@ import MLayoutGridInner from './MLayoutGridInner'
 export {
   MLayoutGrid,
   MLayoutGridCell,
-  MLayoutGridInner
+  MLayoutGridInner,
 }

@@ -187,21 +187,21 @@
   import {
     MLayoutGrid,
     MLayoutGridCell,
-    MLayoutGridInner
+    MLayoutGridInner,
   } from './components/LayoutGrid'
   import {
     MBody,
-    MButtonLabel,
-    MCaption,
+    // MButtonLabel,
+    // MCaption,
     MDisplay,
     MHeadline,
     MTitle,
     MSubtitle,
-    MTypography
+    // MTypography
   } from './components/Typography'
   import {
     MCard,
-    MCardMediaItem
+    MCardMediaItem,
   } from './components/Card'
   import { MCheckbox } from './components/Checkbox'
   import { MDialog } from './components/Dialog'
@@ -210,7 +210,7 @@
     MPermanentDrawer,
     MPersistentDrawer,
     MTemporaryDrawer,
-    MDrawerContent
+    MDrawerContent,
   } from './components/Drawer'
 
   import { MElevation } from './components/Elevation'
@@ -218,7 +218,7 @@
   import { MIconToggle } from './components/IconToggle'
   import {
     MList,
-    MListItem
+    MListItem,
   } from './components/List'
 
   export default {
@@ -247,16 +247,16 @@
       MIconToggle,
       MLinearProgress,
       MList,
-      MListItem
+      MListItem,
     },
 
     data () {
       return {
         customStyles: {
-          '--mdc-theme-primary': '#4286f4'
+          '--mdc-theme-primary': '#4286f4',
         },
         checkboxValue: true,
-        iconToggle: false
+        iconToggle: false,
       }
     },
 
@@ -273,7 +273,7 @@
       },
       iconEvent (value) {
         console.log('IconToggle clicked', value)
-      }
-    }
+      },
+    },
   }
 </script>

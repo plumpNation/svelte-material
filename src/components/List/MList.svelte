@@ -9,7 +9,7 @@ export default {
   data () {
     return {
       orientation: 'vertical',
-      selection: 'single' // single
+      selection: 'single', // single
     }
   },
 
@@ -24,11 +24,11 @@ export default {
       if (selection === 'single') {
         this.mdcList.singleSelection = true
       }
-    }
+    },
   },
 
   ondestroy () {
     this.mdcList.destroy()
-  }
+  },
 }
 </script>

@@ -8,7 +8,7 @@ const outFile = 'public/assets/index.css'
 sass.render({
   file,
   includePaths: ['src', 'node_modules'],
-  outFile
+  outFile,
 }, (err, result) => {
   console.log(err || result)
 

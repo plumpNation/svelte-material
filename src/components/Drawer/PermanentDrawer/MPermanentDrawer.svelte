@@ -13,12 +13,12 @@
 export default {
     data () {
       return {
-        slots: []
+        slots: [],
       }
     },
 
     oncreate () {
       this.set({ slots: this.options.slots })
-    }
+    },
   }
 </script>

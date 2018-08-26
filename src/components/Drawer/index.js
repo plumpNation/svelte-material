@@ -7,5 +7,5 @@ export {
   MPermanentDrawer,
   MPersistentDrawer,
   MTemporaryDrawer,
-  MDrawerContent
+  MDrawerContent,
 }

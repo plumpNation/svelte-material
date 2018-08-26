@@ -23,9 +23,9 @@
 </aside>
 
 <script>
-  import { MDCTemporaryDrawer } from '@material/drawer'
-
   import './styles.scss'
+
+  import { MDCTemporaryDrawer } from '@material/drawer'
 
   export default {
     data () {
@@ -36,7 +36,7 @@
         primaryToolbarSpacer: false,
         primaryContent: '',
         open: false,
-        mdcTemporaryDrawer: false
+        mdcTemporaryDrawer: false,
       }
     },
 
@@ -52,7 +52,7 @@
       contentClasses: ({ primaryContent }) => {
         return primaryContent &&
           'mdc-theme--primary-bg mdc-theme--text-primary-on-primary'
-      }
+      },
     },
 
     methods: {
@@ -62,7 +62,7 @@
         mdcPersistentDrawer.open = open
 
         this.set({ open: !open, mdcPersistentDrawer })
-      }
+      },
     },
 
     oncreate () {
@@ -71,7 +71,7 @@
       this.set({
         slots: this.options.slots,
         mdcTemporaryDrawer: MDCTemporaryDrawer.attachTo(this.refs.self),
-        open
+        initialOpen,
       })
 
       // this.set({ mdcTemporaryDrawer.open: this.get('open') })
@@ -81,6 +81,6 @@
       const { mdcTemporaryDrawer } = this.get()
 
       mdcTemporaryDrawer.destroy()
-    }
+    },
   }
 </script>

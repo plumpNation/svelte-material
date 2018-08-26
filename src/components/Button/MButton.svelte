@@ -34,7 +34,7 @@
         href: '',
         type: '',
         background: '',
-        color: ''
+        color: '',
       }
     },
 
@@ -51,7 +51,7 @@
         color && classList.push('mdc-theme--' + color)
 
         return classList.join(' ')
-      }
+      },
     },
 
     oncreate () {
@@ -62,6 +62,6 @@
       const { mdcRipple } = this.get()
 
       mdcRipple.destroy()
-    }
+    },
   }
 </script>
