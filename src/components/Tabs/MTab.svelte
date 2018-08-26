@@ -17,7 +17,7 @@
 
   import MIcon from '../Icon/MIcon.html'
 
-export default {
+  export default {
     components: {
       MIcon
     },

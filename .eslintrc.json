@@ -1,0 +1,13 @@
+{
+  "extends": "standard",
+  "parser": "babel-eslint",
+  "plugins": [
+    "html"
+  ],
+  "settings": {
+    "html/html-extensions": [".html", ".svelte"]
+  },
+  "rules": {
+    "no-parsing-error": 0
+  }
+}

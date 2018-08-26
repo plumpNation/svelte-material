@@ -1,11 +1,11 @@
-import MBody from './MBody.html'
-import MButtonLabel from './MButtonLabel.html'
-import MCaption from './MCaption.html'
-import MDisplay from './MDisplay.html'
-import MHeadline from './MHeadline.html'
-import MTitle from './MTitle.html'
-import MSubtitle from './MSubtitle.html'
-import MTypography from './MTypography.html'
+import MBody from './MBody'
+import MButtonLabel from './MButtonLabel'
+import MCaption from './MCaption'
+import MDisplay from './MDisplay'
+import MHeadline from './MHeadline'
+import MTitle from './MTitle'
+import MSubtitle from './MSubtitle'
+import MTypography from './MTypography'
 
 export {
   MBody,

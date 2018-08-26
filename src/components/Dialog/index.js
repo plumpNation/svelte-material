@@ -1,2 +1,2 @@
-import MDialog from './MDialog.html'
+import MDialog from './MDialog'
 export { MDialog }

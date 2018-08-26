@@ -1,2 +1,2 @@
-import MElevation from './MElevation.html'
+import MElevation from './MElevation'
 export { MElevation }

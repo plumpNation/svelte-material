@@ -37,8 +37,8 @@
       }
     },
     components: {
-      MIcon: '../Icon/MIcon.html'
-    }
+      MIcon: '../Icon/MIcon.svelte',
+    },
   }
 </script>
 

@@ -1,3 +1,3 @@
 import './styles.scss'
-import MIcon from './MIcon.html'
+import MIcon from './MIcon'
 export { MIcon }

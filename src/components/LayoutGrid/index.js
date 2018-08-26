@@ -1,6 +1,6 @@
-import MLayoutGrid from './MLayoutGrid.html'
-import MLayoutGridCell from './MLayoutGridCell.html'
-import MLayoutGridInner from './MLayoutGridInner.html'
+import MLayoutGrid from './MLayoutGrid'
+import MLayoutGridCell from './MLayoutGridCell'
+import MLayoutGridInner from './MLayoutGridInner'
 
 export {
   MLayoutGrid,

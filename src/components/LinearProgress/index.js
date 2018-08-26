@@ -1,3 +1,3 @@
-import MLinearProgress from './MLinearProgress.html'
+import MLinearProgress from './MLinearProgress'
 
 export { MLinearProgress }

@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/,
+        test: /\.svelte$/,
         loader: 'svelte-loader'
       },
       {
@@ -62,7 +62,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.json', '.css', '.scss', '.html']
+    extensions: ['.js', '.json', '.css', '.scss', '.svelte']
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -73,7 +73,6 @@ module.exports = {
         context: 'src/',
         from: './index.html',
         to: './index.html'
-        // ignore: [ '*.js', '*.html', '*.scss', '*.css', '*.snap', '__tests__' ]
       }
     ])
   ],

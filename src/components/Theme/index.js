@@ -1,2 +1,2 @@
-import MTheme from './MTheme.html'
+import MTheme from './MTheme'
 export { MTheme }

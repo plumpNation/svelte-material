@@ -45,7 +45,7 @@
 
 <script>
   import { MDCDialog } from '@material/dialog'
-  import MButton from '../Button/MButton.html'
+  import MButton from '../Button/MButton.svelte'
 
   import './styles.scss'
 

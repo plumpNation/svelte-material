@@ -1,17 +1,17 @@
 {#if href}
-  <a role="button" ref:self {href} {name} {disabled} class="mdc-button {classes}">
-    {#if icon}
-    <i class="material-icons mdc-button__icon">{icon}</i>
-    {/if}
-    <slot />
-  </a>
+<a role="button" ref:self {href} {name} {disabled} class="mdc-button {classes}">
+  {#if icon}
+  <i class="material-icons mdc-button__icon">{icon}</i>
+  {/if}
+  <slot />
+</a>
 {:else}
-  <button ref:self {type} {name} {disabled} class="mdc-button {classes}">
-    {#if icon}
-    <i class="material-icons mdc-button__icon">{icon}</i>
-    {/if}
-    <slot />
-  </button>
+<button ref:self {type} {name} {disabled} class="mdc-button {classes}">
+  {#if icon}
+  <i class="material-icons mdc-button__icon">{icon}</i>
+  {/if}
+  <slot />
+</button>
 {/if}
 
 <script>

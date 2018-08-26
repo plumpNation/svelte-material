@@ -1,2 +1,2 @@
-import MIconToggle from './MIconToggle.html'
+import MIconToggle from './MIconToggle'
 export { MIconToggle }

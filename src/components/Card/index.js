@@ -1,5 +1,5 @@
-import MCard from './MCard.html'
-import MCardMediaItem from './MCardMediaItem.html'
+import MCard from './MCard'
+import MCardMediaItem from './MCardMediaItem'
 
 export {
   MCard,

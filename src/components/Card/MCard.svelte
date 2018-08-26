@@ -36,7 +36,7 @@
 <script>
   import './styles.scss'
 
-export default {
+  export default {
     data () {
       return {
         classList: [],

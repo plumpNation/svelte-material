@@ -1,7 +1,7 @@
-import MList from './MList.html'
-import MListDivider from './MListDivider.html'
-import MListItem from './MListItem.html'
-import MListGroup from './MListGroup.html'
-import MListGroupSubheader from './MListGroupSubheader.html'
+import MList from './MList'
+import MListDivider from './MListDivider'
+import MListItem from './MListItem'
+import MListGroup from './MListGroup'
+import MListGroupSubheader from './MListGroupSubheader'
 
 export { MList, MListGroup, MListGroupSubheader, MListDivider, MListItem }

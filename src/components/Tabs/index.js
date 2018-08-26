@@ -1,2 +1,2 @@
-import MTab from './MTab.html'
+import MTab from './MTab'
 export { MTab }

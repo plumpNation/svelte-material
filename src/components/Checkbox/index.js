@@ -1,4 +1,4 @@
-import MCheckbox from './MCheckbox.html'
+import MCheckbox from './MCheckbox'
 
 export {
   MCheckbox

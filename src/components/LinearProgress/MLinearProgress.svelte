@@ -12,7 +12,7 @@
 <script>
   import { MDCLinearProgress } from '@material/linear-progress'
 
-  export default {
+export default {
     data () {
       return {
         open: false,

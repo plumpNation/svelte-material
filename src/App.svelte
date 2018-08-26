@@ -178,9 +178,11 @@
 </MTheme>
 
 <script>
+  import './main.scss'
+
   import { MTheme } from './components/Theme'
   import { MLinearProgress } from './components/LinearProgress'
-  import MButton from './components/Button/MButton.html'
+  import { MButton } from './components/Button'
   import { MFab } from './components/Fab'
   import {
     MLayoutGrid,
@@ -218,8 +220,6 @@
     MList,
     MListItem
   } from './components/List'
-
-  import './theme.scss'
 
   export default {
     components: {
@@ -274,6 +274,6 @@
       iconEvent (value) {
         console.log('IconToggle clicked', value)
       }
-    },
+    }
   }
 </script>
