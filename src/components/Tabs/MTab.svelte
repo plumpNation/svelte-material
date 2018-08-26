@@ -1,4 +1,4 @@
-<a class="mdc-tab {classes}">
+<button class="mdc-tab {classes}" role="tab">
   <slot name="icon"/>
 
   {#if hasIcon && label}
@@ -10,18 +10,12 @@
     <slot />
   </span>
   {/if}
-</a>
+</button>
 
 <script>
   import { MDCTab } from '@material/tab'
 
-  import MIcon from '../Icon/MIcon.svelte'
-
   export default {
-    components: {
-      MIcon,
-    },
-
     oncreate () {
       this.tab = new MDCTab(document.querySelector('.mdc-tab'))
     },
